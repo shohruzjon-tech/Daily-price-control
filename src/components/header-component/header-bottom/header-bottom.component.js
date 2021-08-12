@@ -65,7 +65,7 @@ const history=useHistory();
                           </HeaderBottomListItem>   
                    </HeaderBottomRightMenu>
                    <div className={classes.root}>
-                      <Button variant="outlined" color="primary">
+                      <Button variant="outlined" color="primary" onClick={()=>history.push('/register')}>
                                Sign in
                       </Button>
                     </div>

@@ -25,7 +25,7 @@ const ScrollItemComponent= ({item}) => {
                      <ProductAdded>Updated at {fullYear}</ProductAdded>
                </ProductInfo>
                <ProductPriceBox>
-                      <ProductTitle>{price}PLN</ProductTitle>
+                      <ProductTitle>{price} PLN</ProductTitle>
                </ProductPriceBox>
         </ScrollItemContainer>
     );

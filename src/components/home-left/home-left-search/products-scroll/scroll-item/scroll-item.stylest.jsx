@@ -10,7 +10,7 @@ export const ScrollItemContainer=styled.div`
        padding:20px 10px;
        cursor:pointer;
        position:relative;
-
+       color:rgb(30,14,98);
        &:hover{
            border-color:#12FFF7;
            &:before{
