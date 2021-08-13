@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const FormControlComponent=({children}) => {
+const FormControlComponent=({children, handleSubmit}) => {
 
     const classes = useStyles();
 
 
     return(
-              <FormControlContianer className={classes.root} noValidate autoComplete="off">
+              <FormControlContianer onSubmit={handleSubmit} className={classes.root} noValidate autoComplete="off">
                     {children}
              </FormControlContianer>
         )

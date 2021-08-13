@@ -12,8 +12,12 @@ export const ProductControlContainer=styled.div`
             background:#fff;
          }
          &::-webkit-scrollbar-thumb {
-            background:#1976d2;
+            background:#533687;
             border-radius:25px;
-            background-image: linear-gradient(135deg, #b3ffab 10%, #12fff7 100%);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
          }
 `

@@ -6,8 +6,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import Fab from '@material-ui/core/Fab';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-
+import MessageIcon from '@material-ui/icons/Message';
 
 const useStyles = makeStyles((theme)=>(
     { 
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme)=>(
          margin: theme.spacing(1),},
          position:"fixed",
          bottom:"10%",
-         right:"5%"
+         left:"1%"
         },
         extendedIcon: {
         marginRight: theme.spacing(1),},
@@ -26,24 +25,22 @@ const useStyles = makeStyles((theme)=>(
         fullList: {
         width: 'auto',
         },
+        tab:{
+          background:'none'
+        }
 }));
 
 
 const MessagingBar = () => {
     const classes = useStyles();
-    const [state, setState] = React.useState({
-      top: false,
-      left: false,
-      bottom: false,
-      right: false,
-    });
+    const [state, setState] = React.useState({right: false});
   
     const toggleDrawer = (anchor, open) => (event) => {
       if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
         return;
       }
   
-      setState({ ...state, [anchor]: open });
+      setState({right: open });
     };
   
     const list = (anchor) => (
@@ -69,7 +66,7 @@ const MessagingBar = () => {
         <MessagingContainer>
              <div className={classes.root}>
                <Fab onClick={toggleDrawer("right", true)} color="secondary" aria-label="edit">
-                  <MailOutlineIcon />
+                  < MessageIcon />
                </Fab>
               </div>
           <Drawer anchor={"right"} open={state["right"]} onClose={toggleDrawer("right", false)}>

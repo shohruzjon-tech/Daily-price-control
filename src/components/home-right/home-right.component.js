@@ -1,6 +1,7 @@
 import React from 'react';
 import { HomeRightContainer } from './home-right.styles';
-import MessagingBar from '../messaging-bar/messaging-bar.component';
+import ShoppingList from './shopping-list/shopping-list.component';
+
 
 const HomeRightComponent = () => {
 
@@ -9,8 +10,7 @@ const HomeRightComponent = () => {
 
     return (
         <HomeRightContainer>
-            home right
-            <MessagingBar/>
+             <ShoppingList/>
         </HomeRightContainer>
     );
 

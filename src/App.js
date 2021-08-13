@@ -6,7 +6,6 @@ import RegisterPage from './pages/register/register.component';
 
 
 
-
 const  App=()=> {
 
 
@@ -15,7 +14,7 @@ const  App=()=> {
                <Switch>
                    <Route exact path="/">
                           <HeaderComponent/>
-                          <HomePage/>
+                              <HomePage/>
                     </Route> 
                    <Route exact path="/register" component={RegisterPage}/> 
                </Switch>
