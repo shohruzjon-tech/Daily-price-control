@@ -29,7 +29,7 @@ export const HeaderTopDataBtn=styled.button`
      border-radius:25px;
      padding:2px 15px;
      color:#fff;
-     transition: 400ms ease-in-out;
+     transition:color 400ms;
      margin:0 10px;
      &:hover{
          background-color:#269bd1;

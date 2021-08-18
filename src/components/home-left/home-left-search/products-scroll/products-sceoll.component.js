@@ -11,7 +11,7 @@ const ProductScroll = () => {
 
     return (
         <ProductControlContainer>
-              {DATA_ARRAY.map(item=><ScrollItemComponent item={item}/>)}
+              {DATA_ARRAY.map((item, index)=><ScrollItemComponent item={item} key={item.id} index={index}/>)}
         </ProductControlContainer>
     );
 }

@@ -58,10 +58,10 @@ const history=useHistory();
                                     </SubList>
                         </HeaderBottomListItem>   
                         <HeaderBottomListItem>
-                              <HeadertextHover>News</HeadertextHover>
+                              <HeadertextHover onClick={()=>history.push("/news")}>News</HeadertextHover>
                        </HeaderBottomListItem>   
                         <HeaderBottomListItem> 
-                           <HeadertextHover>Account</HeadertextHover>
+                           <HeadertextHover onClick={()=>history.push("/account")}>Account</HeadertextHover>
                           </HeaderBottomListItem>   
                    </HeaderBottomRightMenu>
                    <div className={classes.root}>

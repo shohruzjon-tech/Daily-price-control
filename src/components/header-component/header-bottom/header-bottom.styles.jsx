@@ -99,7 +99,7 @@ export const HeadertextHover=styled.span`
      margin:0 10px;
      padding:0 10px;
      cursor: pointer;
-    transition:300ms;
+     transition:color 300ms;
      &:hover{
     color:#1c095099;
 }

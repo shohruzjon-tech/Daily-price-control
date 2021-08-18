@@ -7,10 +7,21 @@ export const ScrollItemContainer=styled.div`
        grid-template-columns:1fr 2fr 1fr;
        background:none;
        border-bottom:1px solid #ddd;
+       border:${props=>props?.index? "1px solid red" : "1px"};
        padding:20px 10px;
        cursor:pointer;
        position:relative;
        color:rgb(30,14,98);
+       &:before{
+        content:"";
+        width:10px;
+        height:96%;
+        margin-top:0.8%;
+        border-radius:4px;
+        background-color:${props=>props?.index? "red" : "none"};
+        position:absolute;
+        margin-left:2px;
+    }
        &:hover{
            border:1px solid;
            border-color:rgba(255, 255, 255, 0.8);
@@ -18,14 +29,13 @@ export const ScrollItemContainer=styled.div`
            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
            backdrop-filter: blur(5px);
            -webkit-backdrop-filter: blur(5px);
-           border: 1px solid rgba(255, 255, 255, 0.3);
+           border: ${props=>props?.index? "1px solid red":"1px solid rgba(255, 255, 255, 0.3)"};
            &:before{
                content:"";
                width:10px;
                height:96%;
-               margin-top:0.8%;
                border-radius:4px;
-               background-color:rgba(255, 255, 255, 1);
+               background-color:${props=>props?.index? "red" : "none"};
                position:absolute;
                margin-left:2px;
            }

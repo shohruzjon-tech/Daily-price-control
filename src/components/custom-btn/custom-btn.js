@@ -1,22 +1,23 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      padding:"9px 10px",
+
+export default function CustomButton({fill, color, name, icon, onClick, type, padding}) {
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+        padding:()=>padding ? "8px 15px" : "2px 10px",
+      },
     },
-  },
-}));
-
-export default function CustomButton({fill, color, name, icon}) {
+  }));
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button variant={fill} color={color}>
+      <Button type={type} variant={fill} color={color} onClick={onClick}>
           {icon}  {name}
       </Button>
     </div>
